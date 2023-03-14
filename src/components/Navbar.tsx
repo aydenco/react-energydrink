@@ -64,14 +64,6 @@ function Navbar() {
                 </Button>
                 <Button className='p-3 m-5 bg-yellow-500 justify-center rounded-xl'>
                     <div>
-                        <Link to='/dashboard' onClick={ clicked } className='flex place-items-center mt-0 lg:inline-block lg:mt-0
-                        text-orange-800 hover:text-white mr-4'>
-                            Dashboard
-                        </Link>
-                    </div>
-                </Button>
-                <Button className='p-3 m-5 bg-yellow-500 justify-center rounded-xl'>
-                    <div>
                         <Link to='/drink' onClick={ clicked } className='flex place-items-center mt-0 lg:inline-block lg:mt-0
                         text-orange-800 hover:text-white mr-4'>
                             Drinks
@@ -90,7 +82,15 @@ function Navbar() {
                         </div>
                     </Button>
                     :
-                    
+                    <>
+                    <Button className='p-3 m-5 bg-yellow-500 justify-center rounded-xl'>
+                    <div>
+                        <Link to='/dashboard' onClick={ clicked } className='flex place-items-center mt-0 lg:inline-block lg:mt-0
+                        text-orange-800 hover:text-white mr-4'>
+                            Dashboard
+                        </Link>
+                    </div>
+                    </Button>
                     <Button className='p-3 m-5 bg-yellow-500 justify-center rounded-xl'>
                         <div>
                             <Link to="/" onClick={ () => { signOutOnClick() }} className="flex place-items-center mt-0
@@ -99,6 +99,7 @@ function Navbar() {
                             </Link>
                         </div>
                     </Button>
+                    </>
                 }
             </div>
         </div>
